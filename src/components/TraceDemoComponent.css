@@ -1,0 +1,52 @@
+:root {
+  /* 2. Color from variable */
+  --trace-text-color: #4f46e5; /* Indigo */
+}
+
+/* Base properties */
+.trace-element {
+  /* Base padding to be overridden by cascade */
+  padding: 10px;
+
+  /* Base font-size to be overridden by specificity */
+  font-size: 14px;
+
+  /* Base background to be overridden by media query */
+  background-color: #f1f5f9;
+
+  /* Variable color usage */
+  color: var(--trace-text-color);
+
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* 1. Padding from Cascade */
+/* Same specificity (.trace-element), declared later, so it wins */
+.trace-element {
+  padding: 32px 64px;
+}
+
+/* 3. Font size overridden by specificity */
+/* Specificity 0,1,0 (.trace-element base rule was 0,1,0 too) - let's override with higher specificity */
+.trace-demo-container .trace-element {
+  font-size: 18px; /* Specificity 0,2,0 */
+}
+
+/* 4. Background color from Media Query */
+@media (max-width: 400px) {
+  #trace-demo.trace-demo-container .trace-element {
+    background-color: red; /* Blue background on desktop */
+  }
+}
+
+/* 5. Cursor from pseudo-class hover */
+.trace-element:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}

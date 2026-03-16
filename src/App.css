@@ -1,8 +1,59 @@
-html {
-  color-scheme: light dark;
-  font-family: system-ui;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.app-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: #1e293b;
+}
+
+.app-subtitle {
+  color: #64748b;
+  font-size: 18px;
+}
+
+.demo-main {
+  background: white;
+  padding: 60px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100%;
+  align-items: center;
+}
+
+.instructions {
+  margin-top: 40px;
+  background: #e2e8f0;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.instructions ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #334155;
+  line-height: 1.8;
+}
+
+.instructions li strong {
+  color: #0f172a;
 }

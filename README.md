@@ -40,7 +40,9 @@ The authored CSS undergoes several transofmations during build process to optimi
 
 3. Minification: Lightningcss removes all whitespaces, comments, line breaks. The file is optimitez to be as small as posibble while preserving functionality.
 
-4. Source maps: Parcel generates a .css.map file alongside minified css. This file allows browser DevTools to map transformed wall of text to original source files src/\*css. It allows to debug easily with correct file names and line numbers.
+4. Tree shaking. Parcel removes unused css code. For example if we import a css file but don't use any of its classes, parcel will remove it from the production file.
+
+5. Source maps: Parcel generates a .css.map file alongside minified css. This file allows browser DevTools to map transformed wall of text to original source files src/\*css. It allows to debug easily with correct file names and line numbers.
 
 ## Example flow
 
@@ -52,3 +54,7 @@ After build they will be in /dist directory
 
 Generated css will have name [name].[hash].css
 Generated sourcemap will have name [name].[hash].css.map
+
+## Sources
+
+https://parceljs.org/features/production
